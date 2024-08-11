@@ -17,6 +17,7 @@ body {
     border-right: none;
     border-left: none;
 }
+
 ::-webkit-scrollbar-track-piece:end {
     background: #dcdcdc;
 }
@@ -233,6 +234,7 @@ body {
 .top-banner a:hover {
     text-decoration: 1px solid underline #fff;
 }
+
 /* Section store content*/
 .sc-store-content {
     padding: 21px 0 0 156px;
@@ -257,18 +259,24 @@ body {
 .sc-product {
     background-color: #eeeeee;
 }
-.p-container, .layout-product {
+
+.p-container,
+.layout-product {
     padding: 0 calc(15% - 80px);
+    padding-bottom: 20px;
 }
+
 .p-header {
     display: flex;
     flex-direction: row-reverse;
 }
+
 .p-header .p-logo {
     width: 215px;
     margin-left: 20px;
     margin: 25px 0;
 }
+
 .p-filter {
     display: flex;
     gap: 15px;
@@ -276,10 +284,13 @@ body {
     align-items: center;
     font-size: 0.9rem;
 }
-.p-filter p {
+
+.p-filter > p {
+    font-size: 1rem;
     margin: 0;
     padding: 0;
 }
+
 .p-filter-drop {
     display: flex;
     gap: 20px;
@@ -302,17 +313,216 @@ body {
     font-size: 1rem;
     padding: 0 14px;
 }
+
 .btn-filter svg {
     width: 12px;
     height: 12px;
     transform: rotate(90deg);
 }
+
+/* FILTER */
+.filter-list {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-list li {
+    list-style: none;
+}
+
+.filter-list .f-item {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #a1a1a1;
+}
+.f-item:first-child {
+    border-top: 1px solid #a1a1a1;
+}
+
+.filter-list .f-item button {
+    background-color: transparent;
+    border: none;
+    font-family: 'TT Norms Pro', sans-serif;
+    font-size: 1rem;
+    padding: 13px 0;
+    cursor: pointer;
+
+}
+
 /*Layout Product*/
 .layout-product {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 20px;
+    column-gap: 10px;
+    grid-template-columns: 270px 1fr;
+}
+
+/* Product List Card*/
+.pl-cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.pl-card {
+    background-color: #fbfbfb;
+    box-shadow: 0px 2px 4px 0px rgba(103, 103, 103, 0.2);
+    border-radius: 10px;
+    padding: 30px 17px 5px 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 270px;
+}
+
+.pl-card .card-header {
+    font-size: 0.75rem;
+}
+
+.card-header span {
+    border: 1px solid #a1a1a1;
+    border-radius: 2px;
+    padding: 3px 10px;
+}
+
+.card-header span:last-child {
+    border: 1px solid #ff0000;
+    color: #ff0000;
+}
+
+.pl-card a img {
+    width: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.pl-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-name {
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.card-name p {
+    margin: 0;
+    padding: 0;
+}
+
+.card-name a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.card-name h3 {
+    margin: 0;
+    padding: 5px 0 12px 0;
+}
+
+.warn-container {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.warn-container p {
+    margin: 0;
+    padding: 0;
+}
+
+.card-description {
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.card-description .price {
+    margin: 0;
+    padding: 12px 0;
+    font-size: 1.2rem;
+    color: #ff0000;
+    font-weight: 500;
+}
+
+.discount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discount p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.78rem;
+}
+
+.discount p:last-child {
+    color: #ff0000;
+    font-weight: 500;
+}
+
+.discount+p {
+    margin: 0;
+    padding: 12px 0;
+    font-size: 0.8rem;
+}
+
+/* CARD SPECIFICS */
+.card-specs {
+    font-size: 0.9rem;
+}
+
+.card-specs ul {
+    padding: 0 0 0 20px;
+}
+
+.card-specs ul li {
+    padding: 5px 0;
+}
+
+/*CARD FOOTER*/
+
+/* Buttons container */
+.btn-footer {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 12px 0;
+}
+
+.card-footer button {
+    background-color: #0000ff;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    height: 32px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'TT Norms Pro', sans-serif;
+    border: 1px solid #0000ff;
+}
+
+.card-footer button:nth-child(2) {
+    background-color: #ffffff;
+    color: #0000ff;
+    border: 1px solid #0000ff;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #a1a1a1;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 1024px) {
