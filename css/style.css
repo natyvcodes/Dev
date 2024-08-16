@@ -187,8 +187,6 @@ body {
     padding: 12px 16px;
     border: 1px solid #a1a1a1;
     z-index: 1;
-    width: 97.96vw;
-    height: 400px;
 }
 
 .dropdown:hover .dropdown-content,
@@ -498,6 +496,7 @@ body {
 .footer-container {
     padding: 0 calc(15% - 80px);
 }
+
 .btn-footer {
     border-bottom: 1px solid #d2d2d2;
     padding: 12px 0;
@@ -549,14 +548,17 @@ input[type="checkbox"] {
     border: 1px solid #a1a1a1;
     border-radius: 5px;
 }
+
 .num-pages {
     padding: 20px 0;
     grid-column: 2;
     text-align: center;
 }
+
 .empty-container {
     height: 90px;
 }
+
 /* FOOTER BIG SCREENS */
 footer {
     padding: 20px 16px;
@@ -573,6 +575,7 @@ footer {
     padding: 20px 0;
     margin-top: 20px;
 }
+
 /* display flex info list */
 .info-list {
     display: flex;
@@ -651,7 +654,7 @@ footer {
 }
 
 /* ACCORDION */
-.accordions-container{
+.accordions-container {
     display: flex;
     padding: 20px 0;
     justify-content: space-evenly;
@@ -666,8 +669,8 @@ footer {
 
 .btn-accordion {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: start;
+    align-items: flex-start;
     border: none;
     width: 100%;
     font-family: 'TT Norms Pro', sans-serif;
@@ -682,6 +685,7 @@ footer {
     margin: 0;
     padding: 10px 0;
 }
+
 .btn-accordion svg {
     display: none;
 }
@@ -798,6 +802,7 @@ footer {
 
 .owner .info-owner {
     display: flex;
+    gap: 10px;
     align-items: center;
 }
 
@@ -829,6 +834,7 @@ footer {
     border-right: 1px solid #585858;
     padding-right: 12px;
 }
+
 @media screen and (max-width: 1024px) {
     .top-bar {
         display: none;
@@ -928,10 +934,15 @@ footer {
     .sc-product {
         padding: 20px 16px;
     }
-    
+
+    .sc-store-bar {
+        padding: 10px 16px;
+    }
+
     .filter-bar {
         min-width: 150px;
     }
+
     /* Cards */
     .pl-cards-container {
         grid-template-columns: repeat(2, 1fr);
@@ -972,6 +983,28 @@ footer {
 
     .num-pages {
         text-align: center;
+    }
+
+    /* Footer */
+    .info-item {
+        padding: 0 10px;
+    }
+
+    .info-item svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .info-item .info-text p {
+        font-size: 0.9rem;
+    }
+
+    .info-item .info-text p:last-child {
+        font-size: 0.8rem;
+    }
+
+    .q-accordion {
+        padding: 0 10px;
     }
 
 }
@@ -1081,10 +1114,12 @@ footer {
     .btn-filter:nth-child(2) p {
         margin: 0;
     }
+
     .pl-cards-container {
         width: 100%;
         grid-template-columns: 1fr;
     }
+
     .pl-card {
         width: 92%;
     }
@@ -1098,6 +1133,7 @@ footer {
         grid-column: 1;
         text-align: center;
     }
+
     .empty-container {
         height: 20px;
     }
@@ -1199,6 +1235,7 @@ footer {
     .accordions-container {
         flex-direction: column;
     }
+
     .q-accordion {
         border-bottom: 1px solid #a1a1a1;
     }
