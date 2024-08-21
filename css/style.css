@@ -836,6 +836,19 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+
+    .navbar {
+        width: 55%;
+        padding: 0 12px;
+        justify-content: space-between;
+        height: 50px;
+    }
     .top-bar {
         display: none;
     }
@@ -889,7 +902,6 @@ footer {
     body {
         font-size: 14px;
     }
-
     .navbar {
         padding: 0 12px;
         justify-content: space-between;
@@ -1012,11 +1024,20 @@ footer {
 /* MOBILE RESPONSIVE */
 @media (max-width: 720px) {
 
+
     body {
         font-size: 14px;
     }
 
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+
     .navbar {
+        width: 55%;
         padding: 0 12px;
         justify-content: space-between;
         height: 50px;
